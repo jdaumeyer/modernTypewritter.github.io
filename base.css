@@ -1,9 +1,9 @@
 :root {
-	--bg-color-light: #DFDFFF;
-	--bg-color-dark:  #3D3D5E;
+	--bg-color-light: #F6F7FF;
+	--bg-color-dark:  #485243;
 	
-	--text-color-dark:  #6F6F7F;
-	--text-color-light:	#B2B2CC;
+	--text-color-dark:  #000000;
+	--text-color-light:	#FF9F75;
 
 	--highlight-color: #9292FF;
 }
@@ -11,4 +11,35 @@
 body {
 	background-color: var(--bg-color-light);
 	color: var(--text-color-dark);
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	display: grid;
+	grid-template-areas: "nav header header"
+											 "nav text text"
+											 "nav footer footer";
+	grid-template-rows: 10% 33% 33%;
+	grid-template-columns: 10% 43% 33%;
+}
+
+nav {
+	grid-area: nav;
+	background-color: var(--bg-color-dark);
+	color: var(--text-color-light);
+}
+
+header {
+	grid-area: header;
+	text-align: center;
+}
+
+.content {
+	grid-area: text;	
+}
+
+footer {
+	grid-area: footer;
+	background-color: var(--bg-color-dark);
 }
